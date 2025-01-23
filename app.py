@@ -7,18 +7,20 @@ st.write("""
  Spaced repetition System SQL Practice
 """)
 
-option = st.selectbox(
+with st.sidebar:
+
+    option = st.selectbox(
     "What would you like to review",
     ["Email", "Home phone", "Mobile phone"],
     index = None,
     placeholder= "Select a theme"
 )
 
-st.write("You selected:", option)
+    st.write("You selected:", option)
 
 
 
-data = {"a" : [1,2,3], "b" : [4,5,6]}
+data = {"a" : [1,2,3], "b" : [4,5,6], "c": [7,8,9]}
 df = pd.DataFrame(data)
 
 
